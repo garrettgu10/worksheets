@@ -12,8 +12,8 @@ function randomWord(type){
 
 questions = [
   {
-  text: "If you had NUM0 WRD0s and you divided them among NUM1 WRD1s, how many WRD0s would each WRD1 get?",
-  items: [noun,noun],
+  text: "If you had NUM0 WRD2 WRD0s and you divided them among NUM1 WRD3 WRD1s, how many WRD2 WRD0s would each WRD3 WRD1 get?",
+  items: [noun,noun,adj,adj],
   ans: function(nums){
     return nums[0]/nums[1];
   },
