@@ -2,7 +2,7 @@ function makeSheet(){
   document.getElementById("textArea").innerHTML = "";
   for(var i = 0; i < 10; i++){
     var question = questions[Math.floor(Math.random()*questions.length)];
-    var nums = question.genNums();
+    var nums = question.generateNums();
     var answer = question.ans(nums);
     var text = question.text;
     var wordTypes = question.wordTypes;

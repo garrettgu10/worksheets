@@ -5,7 +5,7 @@ questions = [
     ans: function(nums){
       return nums[0]/nums[1];
     },
-    genNums: function(){
+    generateNums: function(){
       var two = parseInt(Math.floor(Math.random()*10+1));
       var one = two*parseInt(Math.floor(Math.random()*10+1));
       return [one, two];
@@ -17,7 +17,7 @@ questions = [
     ans: function(nums){
       return nums[0]/nums[1];
     },
-    genNums: function(){
+    generateNums: function(){
       var two = parseInt(Math.floor(Math.random()*10+1));
       var one = two*parseInt(Math.floor(Math.random()*10+1));
       return [one, two];
@@ -29,7 +29,7 @@ questions = [
     ans: function(nums){
       return nums[0]*nums[1];
     },
-    genNums: function(){
+    generateNums: function(){
       var two = parseInt(Math.floor(Math.random()*10+1));
       var one = parseInt(Math.floor(Math.random()*10+1));
       return [one, two];
