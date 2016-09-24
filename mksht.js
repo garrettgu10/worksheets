@@ -1,6 +1,7 @@
 function makeSheet(){
   document.getElementById("textArea").innerHTML = "";
-  for(var i = 0; i < 10; i++){
+  var problems = parseInt(document.getElementById('numProblems').value);
+  for(var i = 0; i < problems; i++){
     var question = questions[Math.floor(Math.random()*questions.length)];
     var nums = question.generateNums();
     var answer = question.ans(nums);
