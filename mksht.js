@@ -1,4 +1,5 @@
 function makeSheet(){
+  document.getElementById("textArea").innerHTML = "";
   for(var i = 0; i < 10; i++){
     var question = questions[Math.floor(Math.random()*questions.length)];
     var nums = question.genNums();
@@ -11,6 +12,6 @@ function makeSheet(){
     for(var j = 0; j < question.items.length; j++){
       text = text.replace(new RegExp("WRD"+String(j),'g'),randomWord(wordTypes[j]));
     }
-    document.write(text+" <b>"+String(question.ans(nums))+"</b><br />");
+    document.getElementById("textArea").innerHTML += String(i+1)+ ". "+text+" <b>"+String(question.ans(nums))+"</b><br />";
   }
 }
