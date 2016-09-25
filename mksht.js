@@ -35,7 +35,7 @@ function makeSheet(){
       text = text.replace(new RegExp("WRD"+String(j),'g'), words[j]);
     }
     document.getElementById("textArea").innerHTML += "<li>"+text+"</li><br />";
-    document.getElementById("answers").value += "<li>" + question.ans(nums) + "</li><br />";
+    document.getElementById("answers").value += "<li>" + question.ans(nums) + "</li>";
   }
   document.getElementById("buttonArea").innerHTML = "<button onClick = \"javascript: showAnswers()\">View answers</button>";
 }
