@@ -13,6 +13,7 @@ function showAnswers(){
 function makeSheet(){
   document.getElementById("textArea").innerHTML = "";
   document.getElementById("answers").value = "";
+  document.getElementById("answers").innerHTML = "";
   var problems = parseInt(document.getElementById('numProblems').value);
   for(var i = 0; i < problems; i++){
     var question = questions[Math.floor(Math.random()*questions.length)];
