@@ -6,8 +6,8 @@ questions = [
       return nums[0]/nums[1];
     },
     generateNums: function(){
-      var two = parseInt(Math.floor(Math.random()*10+1));
-      var one = two*parseInt(Math.floor(Math.random()*10+1));
+      var two = parseInt(Math.floor(Math.random()*12+1));
+      var one = two*parseInt(Math.floor(Math.random()*12+1));
       return [one, two];
     }
   },
@@ -18,8 +18,8 @@ questions = [
       return nums[0]/nums[1];
     },
     generateNums: function(){
-      var two = parseInt(Math.floor(Math.random()*10+1));
-      var one = two*parseInt(Math.floor(Math.random()*10+1));
+      var two = parseInt(Math.floor(Math.random()*12+1));
+      var one = two*parseInt(Math.floor(Math.random()*12+1));
       return [one, two];
     }
   },
@@ -30,9 +30,47 @@ questions = [
       return nums[0]*nums[1];
     },
     generateNums: function(){
-      var two = parseInt(Math.floor(Math.random()*10+1));
-      var one = parseInt(Math.floor(Math.random()*10+1));
+      var two = parseInt(Math.floor(Math.random()*12+1));
+      var one = parseInt(Math.floor(Math.random()*12+1));
       return [one, two];
+    }
+  },
+  {
+    text: "You collect WRD0 WRD1s. Suppose you start off with NUM0 WRD0 WRD1s, and WRD2 gives you NUM1 more WRD0 WRD1s. How many WRD0 WRD1s do you have now?",
+    wordTypes: [adj,noun,girlname],
+    ans: function(nums){
+      return nums[0]+nums[1];
+    },
+    generateNums: function(){
+      var two = parseInt(Math.floor(Math.random()*60+1));
+      var one = parseInt(Math.floor(Math.random()*40+1));
+      return [one, two];
+    }
+  },
+  {
+    text: "You collect WRD0 WRD1s. Suppose you start off with NUM0 WRD0 WRD1s, and WRD2 gives you NUM1 more WRD0 WRD1s. Then WRD3 takes away NUM2 of your WRD0 WRD1s. How many WRD0 WRD1s do you have now?",
+    wordTypes: [adj,noun,boyname,girlname],
+    ans: function(nums){
+      return nums[0]+nums[1]-nums[2];
+    },
+    generateNums: function(){
+      var two = parseInt(Math.floor(Math.random()*60+1));
+      var one = parseInt(Math.floor(Math.random()*40+1));
+      var three = parseInt(Math.floor(Math.random()*(two+one)+1))
+      return [one, two, three];
+    }
+  },
+  {
+    text: "WRD0 has NUM0 WRD1 WRD2s, and WRD3 has NUM1 times the number of WRD0's WRD1 WRD2s. WRD4 has NUM2 more WRD1 WRD2s than WRD3 does. How many WRD1 WRD2s does WRD4 have?",
+    wordTypes: [boyname, adj, noun, girlname, girlname],
+    ans: function(nums){
+      return (nums[0]*nums[1])+nums[2];
+    },
+    generateNums: function(){
+      var one = parseInt(Math.floor(Math.random()*12+1));
+      var two = parseInt(Math.floor(Math.random()*12+1));
+      var three = parseInt(Math.floor(Math.random()*(60)+1))
+      return [one, two, three];
     }
   }
 ];
