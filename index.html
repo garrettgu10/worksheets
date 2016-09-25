@@ -9,8 +9,9 @@
 
 <body>
   <center>
-    How many problems? <input type="text" id="numProblems" value = "10"></input>
-    <button onClick = "javascript: makeSheet()">Press here!</button>
+    How many problems? <input type="text" id="numProblems" value = "10" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('submitButton').click()" ></input>
+    <button id = "submitButton" onClick = "javascript: makeSheet()">Press here!</button>
   </center>
   <ol id = "textArea"></ol>
   <center>
