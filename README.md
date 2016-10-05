@@ -1,2 +1,2 @@
 # worksheets
-A 2 hour project that generates mad lib word problems.
+A simple javascript project that generates mad lib word problems.
